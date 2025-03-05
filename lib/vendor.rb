@@ -19,6 +19,6 @@ class Vendor
             @inventory[item] = number 
         end    
     end
-    
+
 end
- #require 'pry'; binding.pry
+ 
