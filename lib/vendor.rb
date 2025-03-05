@@ -21,7 +21,12 @@ class Vendor
     end
     
     def potential_revenue
-        
+        revenue = 0
+        @inventory.each do |item, stock|
+            price = item.price.to_f * stock
+            revenue += price
+        end
+        revenue
     end
 
 end
