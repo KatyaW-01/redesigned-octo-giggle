@@ -19,6 +19,10 @@ class Vendor
             @inventory[item] = number 
         end    
     end
+    
+    def potential_revenue
+        
+    end
 
 end
  
