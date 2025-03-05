@@ -13,7 +13,12 @@ class Vendor
     end
 
     def stock(item,number)
-        @inventory[item] = number   
+        if @inventory[item]
+            @inventory[item] += number
+        else
+            @inventory[item] = number 
+        end    
     end
+    
 end
  #require 'pry'; binding.pry
