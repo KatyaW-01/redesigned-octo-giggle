@@ -25,4 +25,22 @@ class Market
         end
         results
     end
+
+    def total_inventory
+        results = {}
+        
+        @vendors.each do |vendor| #iterates through every vendor
+            vendor.inventory.map do |item,stock| #iterates through every vendor's inventory, one item at a time
+                if results[item] == nil
+                    results[item] = {quantity: 0}
+                end
+
+                results[item][:quantity] += stock
+
+                results[item][:vendors] = vendors_that_sell(item)       
+            end   
+        end
+        results
+        
+    end
 end
