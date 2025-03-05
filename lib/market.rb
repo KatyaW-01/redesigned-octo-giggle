@@ -53,4 +53,15 @@ class Market
         end
         overstocked
     end
+    
+    def sorted_item_list
+        list = []
+        inventory = total_inventory
+        inventory.each do |item,info|
+            list << item.name
+            
+        end
+        list.sort.uniq
+    end
 end
+#require 'pry'; binding.pry
