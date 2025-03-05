@@ -1,9 +1,17 @@
+require 'date'
 class Market
     attr_reader :name, :vendors
     def initialize(name)
         @name = name
         @vendors = []
+        @date = Date.today
+        #require 'pry'; binding.pry
     end
+    
+    def date
+        @date.strftime("%d/%m/%Y")
+    end
+
     def add_vendor(vendor)
         @vendors << vendor
     end

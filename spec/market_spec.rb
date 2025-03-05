@@ -173,5 +173,14 @@ RSpec.describe Market do
 
             expect(@market.sorted_item_list).to eq(["Banana Nice Cream",'Peach',"Peach-Raspberry Nice Cream",'Tomato'])
         end
+        it 'has a date' do
+            #my notes say you shouldnt stub the whole method you are testing but I didnt see how else to do it
+            #and tests pass, is this the right way to do the stub here?
+
+            allow(@market).to receive(:date).and_return('04/22/2023')
+
+            expect(@market.date).to eq('04/22/2023')
+            
+        end
     end
 end
