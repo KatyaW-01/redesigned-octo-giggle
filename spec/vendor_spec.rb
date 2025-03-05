@@ -66,5 +66,6 @@ RSpec.describe Vendor do
             expect(vendor2.potential_revenue).to eq(345.00)
             expect(vendor3.potential_revenue).to eq(48.75)
         end
+       
     end
 end
